@@ -9,7 +9,6 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -24,11 +23,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.deepseek.firstapplication.screens.homescreen.HomeCard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DashboardScreen() {
+fun DashboardScreen(navController: NavHostController) {
     Scaffold(
         //topbar
         topBar = {
@@ -102,7 +103,8 @@ fun DashboardScreen() {
             verticalArrangement = Arrangement.Center,
 
         ) {
-            HomeCard("Welcome!",Color.Gray)
+            HomeCard("Welcome!", Color.Gray,)
+            HomeCard("MyIntents", Color.Cyan)
 
         }
     }
@@ -114,5 +116,5 @@ fun DashboardScreen() {
 @Preview(showBackground = true)
 @Composable
 fun dashboardpreview(){
-    DashboardScreen()
+    DashboardScreen(rememberNavController())
 }

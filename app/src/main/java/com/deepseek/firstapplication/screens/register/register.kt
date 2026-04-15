@@ -1,6 +1,5 @@
 package com.deepseek.firstapplication.screens.register
 
-import android.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -31,9 +30,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.deepseek.firstapplication.navigation.ROUTE_LOGIN
 
 @Composable
-fun RegisterScreen() {
+fun RegisterScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -121,7 +123,7 @@ fun RegisterScreen() {
         ) {
             Text("REGISTER", fontSize = 24.sp)
         }
-        TextButton(onClick = {}) {
+        TextButton(onClick = {navController.navigate(ROUTE_LOGIN)}) {
             Text("Have an account? Login!")
         }
     }
@@ -129,6 +131,6 @@ fun RegisterScreen() {
 @Preview(showBackground = true)
 @Composable
 fun registerscreenpreview(){
-    RegisterScreen()
+    RegisterScreen(rememberNavController())
 
 }

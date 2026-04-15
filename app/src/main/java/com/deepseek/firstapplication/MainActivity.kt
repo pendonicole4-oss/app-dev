@@ -8,8 +8,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,21 +16,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.deepseek.firstapplication.screens.dashboard.DashboardScreen
-import com.deepseek.firstapplication.screens.demo.BoxScreen
-import com.deepseek.firstapplication.screens.demo.FirstScreen
-import com.deepseek.firstapplication.screens.demo.MyCard
-import com.deepseek.firstapplication.screens.homescreen.HomeCard
-import com.deepseek.firstapplication.screens.login.LoginScreen
-import com.deepseek.firstapplication.screens.register.RegisterScreen
-import com.deepseek.firstapplication.ui.theme.FirstApplicationTheme
+import com.deepseek.firstapplication.navigation.AppNavHost
+import com.deepseek.firstapplication.screens.splashscreen.SplashScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            DashboardScreen()
+            AppNavHost()
+
         }
     }
 }

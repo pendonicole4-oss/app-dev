@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "530205125342",
+    "firebase_url": "https://first-app-101e-default-rtdb.firebaseio.com",
+    "project_id": "first-app-101e",
+    "storage_bucket": "first-app-101e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530205125342:android:2f96edce81bc2ae276b04f",
+        "android_client_info": {
+          "package_name": "com.deepseek.firstapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_1FP7e5rXBLNf8pz40bYIRH5QQKoAFaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
